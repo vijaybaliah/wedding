@@ -1,0 +1,127 @@
+.select {
+  position: relative; }
+
+.select.disabled {
+  cursor: not-allowed; }
+
+.selectControl {
+  width: 100%;
+  background: transparent;
+  border-bottom: solid 1px #d4d4d4; }
+
+.selectControlFocus {
+  border-bottom-color: #526cd0; }
+
+.selectValueCount, .selectValue {
+  display: inline-block;
+  padding: 4px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.87); }
+
+.selectValue {
+  padding-right: 36px; }
+
+.selectValueUnderlay {
+  opacity: 0.5;
+  position: absolute;
+  width: 79%; }
+
+.selectInputWrapper {
+  position: relative;
+  display: flex; }
+
+.selectInput {
+  background: transparent;
+  padding: 4px;
+  border: none;
+  font-size: 1em;
+  flex: 1;
+  flex-basis: 0;
+  width: 0; }
+
+.selectInput:focus {
+  outline: none; }
+
+.selectLoading {
+  position: absolute;
+  right: 24px;
+  top: -20px; }
+
+.selectOptionsWrapper {
+  max-height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1000;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-radius: 1px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.27), 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  width: 99%; }
+
+.option {
+  padding: 8px;
+  cursor: pointer;
+  position: relative; }
+
+.optionCheckbox {
+  margin-right: 8px !important; }
+
+.optionFocused {
+  background: rgba(0, 0, 0, 0.05); }
+
+.selectRemoveIcon {
+  position: absolute;
+  right: 25px;
+  top: 0px;
+  cursor: pointer;
+  padding: 4px; }
+
+.dropIcon {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  cursor: pointer; }
+
+.selectValueUnderlay .selectRemoveIcon {
+  display: none; }
+
+.select.disabled .selectOptionsWrapper .option {
+  color: rgba(0, 0, 0, 0.27);
+  cursor: not-allowed; }
+
+.selectInputDisabled {
+  position: absolute; }
+
+.selectDisabledValue {
+  color: rgba(0, 0, 0, 0.27);
+  width: 100%;
+  display: block; }
+
+.feedSelect {
+  display: flex;
+  align-items: center;
+  padding: 4px; }
+
+.feedSelect:nth-child(even) {
+  background-color: rgba(0, 112, 255, 0.1); }
+
+.feedSelectLabel {
+  width: 25%;
+  text-transform: capitalize;
+  margin: 0 16px 0 8px;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.feedSelectBox {
+  width: 100%; }
+
+.selectBoxWrapper {
+  width: 65%;
+  display: flex; }
+  .selectBoxWrapper input {
+    width: 70%;
+    margin-right: 4px; }

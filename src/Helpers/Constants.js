@@ -1,0 +1,20 @@
+export const ARTICLE_TYPES = [
+  {label: 'dress', value: 'dress'},
+  {label: 'shirts', value: 'shirts'},
+  {label: 'tshirts', value: 'tshirts'},
+  {label: 'jackets', value: 'jackets'},
+  {label: 'tops', value: 'tops'},
+  {label: 'shoes', value: 'shoes'},
+  {label: 'skirts', value: 'skirts'},
+  {label: 'shorts', value: 'shorts'},
+  {label: 'bag', value: 'bag'},
+  {label: 'jeans', value: 'jeans'},
+  {label: 'blazers', value: 'blazers'},
+  {label: 'trousers', value: 'trousers'},
+  {label: 'flats', value: 'flats'},
+  {label: 'heels', value: 'heels'},
+  {label: 'sunglasses', value: 'sunglasses'},
+  {label: 'sweater', value: 'sweater'},
+  {label: 'sweatshirts', value: 'sweatshirts'},
+  {label: 'suit', value: 'suit'}
+]
