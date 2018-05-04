@@ -8,7 +8,7 @@ class App extends Component {
     
     return (
       <main>
-        <Route path={'/'} exact component={MainAppContainer} />
+        <Route path={'/wedding/'} exact component={MainAppContainer} />
       </main>
     );
   }

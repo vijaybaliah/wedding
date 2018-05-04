@@ -1,5 +1,5 @@
 {
-  "name": "runway-tagger",
+  "name": "react-proj",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -46,5 +46,5 @@
   "bugs": {
     "url": "https://vijay1989@bitbucket.org/vijay1989/runway-tagger/issues"
   },
-  "homepage": "/runway-tagger"
+  "homepage": "/wedding"
 }
