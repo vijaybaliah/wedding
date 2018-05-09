@@ -1,97 +1,38 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { FeedMainComponent } from '../../Components/componentIndex';
-import { fetchFeed, fetchFeedDataSuccess, fetchFeedDataError } from '../../modules/home';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchFeedData } from '../../Helpers/Api';
-import Pagination from '../Pagination';
-import styles from '../../App.css';
-import FeedLoading from '../../Components/Feed/FeedLoading'
+import { Link } from 'react-router-dom';
 
 class MainAppContainer extends Component {
-  static propTypes = {
-    isLoading: PropTypes.bool.isRequired,
-    feedData: PropTypes.array.isRequired,
-    fetchSize: PropTypes.number.isRequired,
-    currentPage:PropTypes.number.isRequired,
-    totalCount:PropTypes.number.isRequired,
-  }
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      isOpen: false,
-      imageUrl: ''
+
+  handleEvent = () => {
+    console.log('clicked')
+    try {
+      window.ga('send', 'event', 'WeddingPage', 'LinkClicked', 'LinkClicked')
+    } catch (e) {
+      console.log('event capture error')
     }
+    
   }
-
-  componentDidMount() {
-    this.loadFeedData(this.props.currentPage, this.props.fetchSize)
-  }
-
-  loadFeedData = (currentPage, fetchSize) => {
-    this.props.fetchFeed()
-    fetchFeedData(currentPage, fetchSize)
-    .then(response => {
-      const { data: responseData } = response
-      this.props.fetchFeedDataSuccess({
-        feedData: responseData.data,
-        error: null,
-        currentPage: currentPage,
-        fetchSize: fetchSize,
-        totalCount: 4502
-      })
-    })
-    .catch(error => {
-      this.props.fetchFeedDataError(error)
-    })
-  }
-
-  onPageChange = (page, { sizePerPage }) => {
-    this.loadFeedData(page, sizePerPage)
-  }
-
-  modalOpen = (imageUrl) => {
-    this.setState({
-      isOpen: true,
-      imageUrl
-    })
-  }
-
-  modalClose = () => {
-    this.setState({
-      isOpen: false,
-      imageUrl: ''
-    })
-  }
-
   render() {
-    const {isLoading, feedData } = this.props;
     return (
-      <div>
-        {
-          this.state.isOpen &&
-          <div className={"modalContainer"} onClick={this.modalClose}>
-            <div className={"modalContainerInner"}>
-              <img src={this.state.imageUrl} alt={this.state.imageUrl} />
-            </div>
-          </div>
-        }
-        {
-          isLoading ?
-          <FeedLoading /> :
-          <FeedMainComponent 
-            feedData = {feedData}
-            modalOpen= {this.modalOpen} />
-        }
-        <div className={"paginationContainer"}>
-          <Pagination 
-            currentPage={this.props.currentPage}
-            totalSize={this.props.totalCount}
-            onChange={this.onPageChange}
-            sizePerPage={this.props.fetchSize}
-            sizes={[45, 90]} />
+      <div className="weddingCover">
+        <div>
+        <div className="content">
+          <p className="zeroMargin heading">Vijay</p>
+          <p className="zeroMargin headingSmall">weds</p>
+          <p className="zeroMargin heading">Kalyani</p>
+          <p className="zeroMargin heading">on</p>
+          <p className="zeroMargin heading">Sunday 3rd June 2018</p>
+          <p className="zeroMargin headingSmall">10: 00 pm</p>
+          <p className="zeroMargin headingSmall">venue:</p>
+          <Link to="https://www.google.co.in/maps/dir/''/anna+nagar+church+tuticorin/@8.8053615,78.0611874,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b03efeb0c18b995:0x5497b4e8a58719a5!2m2!1d78.131228!2d8.805368" target="blank" className="linkStyle" onClick={this.handleEvent}>St Micheal Church</Link>
+        </div>
+        <img className="weddingImage" src={'./images/red-wedding-card.jpg'} alt="wedding background" style={{height: `${window.innerHeight}px`}}/>
+        <div className="heartContainer">
+          <img src={"./images/weddingheart.png"} alt="weddingheart"/>
+        </div>
         </div>
       </div>
     )
@@ -100,16 +41,11 @@ class MainAppContainer extends Component {
 }
 
 const mapStateToProps = state => {
-  const { home } = state
   return {
-    ...home
   }
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  fetchFeedDataSuccess,
-  fetchFeedDataError,
-  fetchFeed
 }, dispatch)
 
 export default connect(
