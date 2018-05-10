@@ -48,6 +48,35 @@
     -webkit-box-shadow: 1px 3px 26px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 3px 26px 1px rgba(0,0,0,0.75);
     box-shadow: 1px 3px 26px 1px rgba(0,0,0,0.75);
+    animation: pulse 5s 1;
+}
+
+@keyframes pulse {
+  0% {
+    -ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1); /* Safari */
+    transform: scale(1);
+  }
+  25% {
+    -ms-transform: scale(0.75); /* IE 9 */
+    -webkit-transform: scale(0.75); /* Safari */
+    transform: scale(0.75);
+  }
+  50% {
+    -ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1); /* Safari */
+    transform: scale(1);
+  }
+  75% {
+    -ms-transform: scale(0.75); /* IE 9 */
+    -webkit-transform: scale(0.75); /* Safari */
+    transform: scale(0.75);
+  }
+  100% {
+    -ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1); /* Safari */
+    transform: scale(1);
+  }
 }
 
 .heartContainer {
@@ -63,7 +92,7 @@
 @media (min-width: 768px) and (orientation: portrait) {
     .heartContainer {
         bottom: 4em;
-        width: 54%;
+        width: 40%;
     }
     .content {
         top: 4em;

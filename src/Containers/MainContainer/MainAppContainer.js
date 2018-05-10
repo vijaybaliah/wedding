@@ -2,14 +2,23 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 class MainAppContainer extends Component {
 
+  constructor(props) {
+    super(props)
+    ReactGA.initialize('UA-72154701-5');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
 
   handleEvent = () => {
-    console.log('clicked')
     try {
-      window.ga('send', 'event', 'WeddingPage', 'LinkClicked', 'LinkClicked')
+      ReactGA.event({
+        category: 'WeddingPage',
+        action: 'Link Clicked',
+        label: 'Link Clicked'
+      })
     } catch (e) {
       console.log('event capture error')
     }
@@ -27,7 +36,7 @@ class MainAppContainer extends Component {
           <p className="zeroMargin heading">Sunday 3rd June 2018</p>
           <p className="zeroMargin headingSmall">10: 00 pm</p>
           <p className="zeroMargin headingSmall">venue:</p>
-          <Link to="https://www.google.co.in/maps/dir/''/anna+nagar+church+tuticorin/@8.8053615,78.0611874,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b03efeb0c18b995:0x5497b4e8a58719a5!2m2!1d78.131228!2d8.805368" target="blank" className="linkStyle" onClick={this.handleEvent}>St Micheal Church</Link>
+          <Link to="https://maps.google.com/maps?q=St+Michaels+Church+Anna+Nagar+4th+Street+Doovipuram+Tuticorin+Tamil+Nadu" target="blank" className="linkStyle" onClick={this.handleEvent}>St Micheal Church</Link>
         </div>
         <img className="weddingImage" src={'./images/red-wedding-card.jpg'} alt="wedding background" style={{height: `${window.innerHeight}px`}}/>
         <div className="heartContainer">
