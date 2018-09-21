@@ -1,51 +1,27 @@
 {
-  "name": "react-proj",
+  "name": "react-app-template",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.17.1",
-    "classname": "0.0.0",
-    "lodash": "^4.17.10",
-    "node-sass-chokidar": "0.0.3",
-    "npm-run-all": "^4.1.2",
-    "query-string": "^5.0.1",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
-    "react-ga": "^2.5.0",
-    "react-redux": "^5.0.6",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-router-redux": "next",
-    "react-scripts": "1.0.17",
-    "redux": "^3.7.2",
-    "redux-form": "^7.3.0",
-    "redux-thunk": "^2.2.0",
-    "sifter": "^0.5.3"
+    "axios": "^0.18.0",
+    "history": "^4.7.2",
+    "html2canvas": "^1.0.0-alpha.12",
+    "jspdf": "^1.4.1",
+    "query-string": "^6.1.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.5",
+    "redux": "^4.0.0",
+    "redux-first-router": "^0.0.16-next",
+    "redux-first-router-link": "^1.4.2",
+    "redux-form": "^7.4.2",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
-    "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
-    "build-js": "react-scripts build",
-    "build": "npm-run-all build-css build-js",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://vijay1989@bitbucket.org/vijay1989/runway-tagger.git"
-  },
-  "keywords": [
-    "runway-tagger"
-  ],
-  "author": "Vijay",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://vijay1989@bitbucket.org/vijay1989/runway-tagger/issues"
-  },
-  "homepage": "/wedding"
+  }
 }

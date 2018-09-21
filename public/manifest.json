@@ -1,6 +1,6 @@
 {
-  "short_name": "Vijay & Kalyani",
-  "name": "Vijay Weds Kalyani",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,8 +8,8 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": "./wedding/index.html",
+  "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#860002",
-  "background_color": "#860002"
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
