@@ -1,0 +1,49 @@
+.dropdownContainer {
+  width: 40px;
+  margin: 0px 10px;
+  position: relative; }
+
+.paginationArrow {
+  cursor: pointer;
+  height: 24px; }
+
+.sizeLabel {
+  padding-right: 10px;
+  color: #696969;
+  font-weight: bold; }
+
+.customSelectTag {
+  border: none;
+  border-radius: 0px;
+  appearance: none;
+  float: left;
+  display: inline-block;
+  padding: 0px 16px 0px 5px;
+  background-color: #ffffff;
+  color: #696969;
+  outline: none;
+  font-size: 15px; }
+
+.selectPage {
+  padding-right: 5px;
+  text-align-last: center; }
+
+.showSize {
+  color: #696969; }
+
+.selectTagPointer {
+  content: '';
+  width: 0px;
+  border-width: 6px 5px 0 5px;
+  border-style: solid;
+  border-color: #4a4a4a transparent;
+  display: inline-block;
+  float: left;
+  position: absolute;
+  pointer-events: none;
+  top: 7px;
+  right: 2px; }
+
+.paginationContainer {
+  clear: both;
+  margin: 16px; }

@@ -1,36 +1,20 @@
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
-// import { connectRouter, routerMiddleware } from 'connected-react-router'
-import { reducer as form } from 'redux-form'
-import { connectRoutes } from 'redux-first-router'
+import { createStore, applyMiddleware, compose } from 'redux'
+import { routerMiddleware } from 'react-router-redux'
 import thunk from 'redux-thunk'
 import createHistory from 'history/createBrowserHistory'
-import reducers from './reducers'
-import { middlewares as globalMiddlewares } from './middlewares'
-import routesMap from './routes'
-import queryString from 'query-string'
+import rootReducer from './modules'
 
 export const history = createHistory()
 
-const { reducer, middleware, enhancer } = connectRoutes(history, routesMap, {
-  location: 'router',
-  querySerializer: queryString
-})
-
 const initialState = {}
-const enhancers = [
-  enhancer
-]
-
-const middlewares = [
+const enhancers = []
+const middleware = [
   thunk,
-  ...globalMiddlewares,
-  middleware
+  routerMiddleware(history)
 ]
-
-const rootReducer = combineReducers({ ...reducers, router: reducer, form })
 
 if (process.env.NODE_ENV === 'development') {
-  const devToolsExtension = window.__REDUX_DEVTOOLS_EXTENSION__
+  const devToolsExtension = window.devToolsExtension
 
   if (typeof devToolsExtension === 'function') {
     enhancers.push(devToolsExtension())
@@ -38,11 +22,9 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const composedEnhancers = compose(
-  applyMiddleware(...middlewares),
+  applyMiddleware(...middleware),
   ...enhancers
 )
-
-
 
 const store = createStore(
   rootReducer,

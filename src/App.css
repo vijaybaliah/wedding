@@ -1,28 +1,376 @@
-.App {
+@import url("https://fonts.googleapis.com/css?family=Ruthie");
+.weddingCover {
+  position: relative;
+  overflow: hidden; }
+
+.weddingImage {
+  display: block;
+  width: 100%; }
+
+.content {
+  position: absolute;
+  width: 65%;
   text-align: center;
-}
+  background-color: rgba(90, 0, 0, 0.5);
+  right: 0px;
+  top: 16px;
+  font-family: 'Ruthie', cursive;
+  padding: 16px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 4px; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+.zeroMargin {
+  margin: 0px;
+  color: rgba(255, 255, 255, 0.56); }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
+.heading {
+  font-size: 2em; }
 
-.App-title {
-  font-size: 1.5em;
-}
+.headingSmall {
+  font-size: 1.5em; }
 
-.App-intro {
-  font-size: large;
-}
+.linkStyle {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 2em;
+  background-color: #A84E04;
+  display: block;
+  padding: 0 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 3px 26px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 3px 26px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 3px 26px 1px rgba(0, 0, 0, 0.75);
+  animation: pulse 5s 1; }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+@keyframes pulse {
+  0% {
+    -ms-transform: scale(1);
+    /* IE 9 */
+    -webkit-transform: scale(1);
+    /* Safari */
+    transform: scale(1); }
+  25% {
+    -ms-transform: scale(0.75);
+    /* IE 9 */
+    -webkit-transform: scale(0.75);
+    /* Safari */
+    transform: scale(0.75); }
+  50% {
+    -ms-transform: scale(1);
+    /* IE 9 */
+    -webkit-transform: scale(1);
+    /* Safari */
+    transform: scale(1); }
+  75% {
+    -ms-transform: scale(0.75);
+    /* IE 9 */
+    -webkit-transform: scale(0.75);
+    /* Safari */
+    transform: scale(0.75); }
+  100% {
+    -ms-transform: scale(1);
+    /* IE 9 */
+    -webkit-transform: scale(1);
+    /* Safari */
+    transform: scale(1); } }
+
+.heartContainer {
+  position: absolute;
+  bottom: 16px;
+  width: 40%; }
+  .heartContainer img {
+    display: block;
+    width: 100%; }
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .heartContainer {
+    bottom: 4em;
+    width: 40%; }
+  .content {
+    top: 4em; }
+  .heading {
+    font-size: 4em; }
+  .headingSmall {
+    font-size: 2.5em; }
+  .linkStyle {
+    font-size: 4em; } }
+
+@media (min-width: 768px) and (orientation: landscape) {
+  .heartContainer {
+    bottom: 2em;
+    width: 38%; }
+  .content {
+    top: 1em;
+    width: 60%; }
+  .heading {
+    font-size: 2em; }
+  .linkStyle {
+    font-size: 2em; } }
+
+@media (min-width: 1024px) {
+  .heartContainer {
+    bottom: 2em;
+    width: 33%; }
+  .content {
+    top: 2em; }
+  .heading {
+    font-size: 3em; }
+  .headingSmall {
+    font-size: 2.5em; }
+  .linkStyle {
+    font-size: 3em; } }
+
+@media (min-width: 2560px) {
+  .heartContainer {
+    width: 23%; } }
+
+.select {
+  position: relative; }
+
+.select.disabled {
+  cursor: not-allowed; }
+
+.selectControl {
+  width: 100%;
+  background: transparent;
+  border-bottom: solid 1px #d4d4d4; }
+
+.selectControlFocus {
+  border-bottom-color: #526cd0; }
+
+.selectValueCount, .selectValue {
+  display: inline-block;
+  padding: 4px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.87); }
+
+.selectValue {
+  padding-right: 36px; }
+
+.selectValueUnderlay {
+  opacity: 0.5;
+  position: absolute;
+  width: 79%; }
+
+.selectInputWrapper {
+  position: relative;
+  display: flex; }
+
+.selectInput {
+  background: transparent;
+  padding: 4px;
+  border: none;
+  font-size: 1em;
+  flex: 1;
+  flex-basis: 0;
+  width: 0; }
+
+.selectInput:focus {
+  outline: none; }
+
+.selectLoading {
+  position: absolute;
+  right: 24px;
+  top: -20px; }
+
+.selectOptionsWrapper {
+  max-height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1000;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-radius: 1px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.27), 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  width: 99%; }
+
+.option {
+  padding: 8px;
+  cursor: pointer;
+  position: relative; }
+
+.optionCheckbox {
+  margin-right: 8px !important; }
+
+.optionFocused {
+  background: rgba(0, 0, 0, 0.05); }
+
+.selectRemoveIcon {
+  position: absolute;
+  right: 25px;
+  top: 0px;
+  cursor: pointer;
+  padding: 4px; }
+
+.dropIcon {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  cursor: pointer; }
+
+.selectValueUnderlay .selectRemoveIcon {
+  display: none; }
+
+.select.disabled .selectOptionsWrapper .option {
+  color: rgba(0, 0, 0, 0.27);
+  cursor: not-allowed; }
+
+.selectInputDisabled {
+  position: absolute; }
+
+.selectDisabledValue {
+  color: rgba(0, 0, 0, 0.27);
+  width: 100%;
+  display: block; }
+
+.feedSelect {
+  display: flex;
+  align-items: center;
+  padding: 4px; }
+
+.feedSelect:nth-child(even) {
+  background-color: rgba(0, 112, 255, 0.1); }
+
+.feedSelectLabel {
+  width: 25%;
+  text-transform: capitalize;
+  margin: 0 16px 0 8px;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.feedSelectBox {
+  width: 100%; }
+
+.selectBoxWrapper {
+  width: 65%;
+  display: flex; }
+  .selectBoxWrapper input {
+    width: 70%;
+    margin-right: 4px; }
+
+.dropdownContainer {
+  width: 40px;
+  margin: 0px 10px;
+  position: relative; }
+
+.paginationArrow {
+  cursor: pointer;
+  height: 24px; }
+
+.sizeLabel {
+  padding-right: 10px;
+  color: #696969;
+  font-weight: bold; }
+
+.customSelectTag {
+  border: none;
+  border-radius: 0px;
+  appearance: none;
+  float: left;
+  display: inline-block;
+  padding: 0px 16px 0px 5px;
+  background-color: #ffffff;
+  color: #696969;
+  outline: none;
+  font-size: 15px; }
+
+.selectPage {
+  padding-right: 5px;
+  text-align-last: center; }
+
+.showSize {
+  color: #696969; }
+
+.selectTagPointer {
+  content: '';
+  width: 0px;
+  border-width: 6px 5px 0 5px;
+  border-style: solid;
+  border-color: #4a4a4a transparent;
+  display: inline-block;
+  float: left;
+  position: absolute;
+  pointer-events: none;
+  top: 7px;
+  right: 2px; }
+
+.paginationContainer {
+  clear: both;
+  margin: 16px; }
+
+.feedMainContainer {
+  margin: 16px; }
+
+.feedImage {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  height: 240px;
+  max-width: 180px;
+  overflow: hidden; }
+
+.imgResponsive {
+  display: block;
+  width: 100%; }
+
+.feedItem {
+  width: 18.1111%;
+  padding: 8px;
+  margin: 4px;
+  min-height: 330px;
+  max-height: 350px;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(192, 192, 192, 0.5);
+  background-color: #ffffff;
+  border: solid 1px #d9d9d9;
+  float: left; }
+
+.feedDetailsForm {
+  overflow-y: scroll;
+  height: 85px; }
+
+.feedDetailsFormError {
+  display: block;
+  background-color: rgba(255, 2, 2, 0.45);
+  color: #af0101;
+  padding: 8px;
+  margin-top: 8px; }
+
+@keyframes animePalceHolder {
+  0% {
+    background-position: -468px 0; }
+  100% {
+    background-position: 468px 0; } }
+
+.animatedBackground {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: animePalceHolder;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #fafafa 8%, #dddddd 18%, #fafafa 33%);
+  background-size: 1024px 104px; }
+
+.animeTableHead {
+  width: 100%;
+  height: 8px; }
+
+.animeTableBody {
+  width: 19%;
+  height: 350px;
+  float: left;
+  margin-right: 8px;
+  margin-top: 8px; }
+
+.animeTableContainer {
+  margin: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }

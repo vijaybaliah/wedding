@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Ruthie");
+.weddingCover {
+  position: relative;
+  overflow: hidden; }
+
+.weddingImage {
+  display: block;
+  width: 100%; }
+
+.content {
+  position: absolute;
+  width: 65%;
+  text-align: center;
+  background-color: rgba(90, 0, 0, 0.5);
+  right: 0px;
+  top: 16px;
+  font-family: 'Ruthie', cursive;
+  padding: 16px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 4px; }
+
+.zeroMargin {
+  margin: 0px;
+  color: rgba(255, 255, 255, 0.56); }
+
+.heading {
+  font-size: 2em; }
+
+.headingSmall {
+  font-size: 1.5em; }
+
+.linkStyle {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 2em;
+  background-color: #A84E04;
+  display: block;
+  padding: 0 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 3px 26px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 3px 26px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 3px 26px 1px rgba(0, 0, 0, 0.75);
+  animation: pulse 5s 1; }
+
+@keyframes pulse {
+  0% {
+    -ms-transform: scale(1);
+    /* IE 9 */
+    -webkit-transform: scale(1);
+    /* Safari */
+    transform: scale(1); }
+  25% {
+    -ms-transform: scale(0.75);
+    /* IE 9 */
+    -webkit-transform: scale(0.75);
+    /* Safari */
+    transform: scale(0.75); }
+  50% {
+    -ms-transform: scale(1);
+    /* IE 9 */
+    -webkit-transform: scale(1);
+    /* Safari */
+    transform: scale(1); }
+  75% {
+    -ms-transform: scale(0.75);
+    /* IE 9 */
+    -webkit-transform: scale(0.75);
+    /* Safari */
+    transform: scale(0.75); }
+  100% {
+    -ms-transform: scale(1);
+    /* IE 9 */
+    -webkit-transform: scale(1);
+    /* Safari */
+    transform: scale(1); } }
+
+.heartContainer {
+  position: absolute;
+  bottom: 16px;
+  width: 40%; }
+  .heartContainer img {
+    display: block;
+    width: 100%; }
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .heartContainer {
+    bottom: 4em;
+    width: 40%; }
+  .content {
+    top: 4em; }
+  .heading {
+    font-size: 4em; }
+  .headingSmall {
+    font-size: 2.5em; }
+  .linkStyle {
+    font-size: 4em; } }
+
+@media (min-width: 768px) and (orientation: landscape) {
+  .heartContainer {
+    bottom: 2em;
+    width: 38%; }
+  .content {
+    top: 1em;
+    width: 60%; }
+  .heading {
+    font-size: 2em; }
+  .linkStyle {
+    font-size: 2em; } }
+
+@media (min-width: 1024px) {
+  .heartContainer {
+    bottom: 2em;
+    width: 33%; }
+  .content {
+    top: 2em; }
+  .heading {
+    font-size: 3em; }
+  .headingSmall {
+    font-size: 2.5em; }
+  .linkStyle {
+    font-size: 3em; } }
+
+@media (min-width: 2560px) {
+  .heartContainer {
+    width: 23%; } }
