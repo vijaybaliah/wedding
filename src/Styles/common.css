@@ -16,5 +16,14 @@
 .text-right {
   text-align: right; }
 
+.text-center {
+  text-align: center; }
+
 .padding24 {
   padding: 24px; }
+
+.relative {
+  position: relative; }
+
+.absolute {
+  position: absolute; }

@@ -7,13 +7,14 @@ import classnames from 'classnames';
 import { Field, reduxForm, reset } from 'redux-form';
 import { Helmet } from "react-helmet";
 import moment from 'moment';
-import store from '../../store'
+import store from '../../store';
+import Grid from '@material-ui/core/Grid';
 
-const Input = ({ input, label, type, meta: { touched, error, warning } }) => {
+const Input = ({ input, label, type, index, meta: { touched, error, warning } }) => {
   return (
-    <div>
+    <div className={classnames('relative')}>
       <input {...input} type={type} />
-      {touched && ((error && <span className={classnames('error')}>{error}</span>) || (warning && <span className={classnames('warning')}>{warning}</span>))}
+      {touched && index === 0 && ((error && <span className={classnames('error')}>{error}</span>) || (warning && <span className={classnames('warning', 'absolute')}>{warning}</span>))}
     </div>
   )
 }
@@ -103,28 +104,33 @@ class StroopTest extends Component {
           <meta property="og:title" content="vijay stroop analysis" />
           <meta property="og:description" content="stroop analysis react, vijay udacity assignment" />
         </Helmet>
-        <form onSubmit={handleSubmit(this.onSubmit)}>
+        <form onSubmit={handleSubmit(this.onSubmit)} className={classnames('stroop-form')}>        
           {
             stroopData.map((color, index) =>
-              <div className='flex stroop-list' key={index}>
-                <div className="stroop-color-box">
-                  <p className={classnames('stroop-color-box__text', color.value)}>{color.label}</p>
-                </div>
-                <div className='flex color-options'>
-                  {
-                    STROOP_OPTIONS.map(option =>
-                      <div className={classnames(option + '-bg', 'flex', 'center', 'equal', 'middle')} key={option + index}>
-                        <Field
-                          required
-                          name={color.value + index}
-                          component={Input}
-                          type='radio'
-                          value={option}
-                          validate={value => value === color.value ? undefined : 'check the color you have choosen, the color choosen should match the text ink color'} />
-                      </div>
-                    )
-                  }
-                </div>
+              <div className={classnames('stroop-list')}>
+                <Grid container spacing={12}>
+                  <Grid item sm={2} xs={3}>
+                    <div className="stroop-color-box">
+                      <p className={classnames('stroop-color-box__text', color.value, 'text-center')}>{color.label}</p>
+                    </div>
+                  </Grid>
+                  <Grid item sm={10} xs={9} className='flex color-options'>
+                    {
+                      STROOP_OPTIONS.map((option, i) =>
+                        <div className={classnames(option + '-bg', 'flex', 'center', 'equal','middle')} key={option + index}>
+                          <Field
+                            required
+                            name={color.value + index}
+                            component={Input}
+                            type='radio'
+                            value={option}
+                            index={i}
+                            validate={value => value === color.value ? undefined : 'check the color you have choosen, the color choosen should match the text ink color'} />
+                        </div>
+                      )
+                    }
+                  </Grid>
+                </Grid>
               </div>
             )
           }
