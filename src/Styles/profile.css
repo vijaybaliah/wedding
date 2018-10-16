@@ -1,0 +1,19 @@
+.profileRoot {
+  flex-grow: 1; }
+
+.profile {
+  padding: 24px; }
+
+.profile-img {
+  display: block;
+  width: auto;
+  height: 250px;
+  margin-top: 24px; }
+
+.tic-tac-toe-img {
+  display: block;
+  width: auto;
+  height: 250px; }
+
+.full-width {
+  width: 100%; }

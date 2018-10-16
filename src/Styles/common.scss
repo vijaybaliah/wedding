@@ -1,0 +1,27 @@
+.flex {
+  display: flex;
+}
+
+.flex.center {
+  justify-content: center;
+}
+
+.flex.between {
+  justify-content: space-between;
+}
+
+.flex.middle {
+  align-items: center;
+}
+
+.flex.equal {
+  flex: 1;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.padding24 {
+  padding: 24px;
+}

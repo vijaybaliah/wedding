@@ -1,4 +1,4 @@
-import { action } from '../Helpers/Utils';
+import { action } from '../utils/helper'
 
 const initialState = {
   isLoading: true,

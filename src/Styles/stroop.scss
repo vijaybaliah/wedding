@@ -1,0 +1,119 @@
+.stroop-color-box {
+  flex: 1;
+}
+
+.stroop-color-box__text {
+  font-size: 16px;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.pink {
+  color: pink;
+}
+
+.orange {
+  color: orange;
+}
+
+.brown {
+  color: brown;
+}
+
+.white {
+  color: white;
+}
+
+.red-bg {
+  background-color: red;
+}
+
+.green-bg {
+  background-color: green;
+}
+
+.blue-bg {
+  background-color: blue;
+}
+
+.yellow-bg {
+  background-color: yellow;
+}
+
+.pink-bg {
+  background-color: pink;
+}
+
+.orange-bg {
+  background-color: orange;
+}
+
+.brown-bg {
+  background-color: brown;
+}
+
+.white-bg {
+  background-color: white;
+}
+
+.color-options {
+  flex: 7;
+}
+
+.stroop-list {
+  background-color: #dadada;
+  border-bottom: thin solid #eaeaea;
+  padding: 0px 8px;
+}
+
+.stroop-submit {
+  width: 20%;
+  height: 40px;
+  text-align: center;
+  background-color: #d7acff;
+  box-shadow: none;
+  border: thin solid #a84bff;
+  margin: 8px 0;
+}
+
+.popup-bgm {
+  background-color: rgba(0, 0, 0, 0.50);
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  width: 50%;
+  background-color: #ffffff;
+}
+
+.stroop-title {
+  font-size: 32px;
+  text-align: center;
+}
+
+.stroop-description {
+  padding: 24px;
+}
+

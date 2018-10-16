@@ -1,17 +1,22 @@
 {
-  "name": "react-proj",
+  "name": "vijay-profile",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.2.2",
+    "@material-ui/icons": "^3.0.1",
     "axios": "^0.17.1",
-    "classname": "0.0.0",
+    "classnames": "^2.2.6",
+    "express": "^4.16.4",
     "lodash": "^4.17.10",
+    "moment": "^2.22.2",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.1.2",
     "query-string": "^5.0.1",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
     "react-ga": "^2.5.0",
+    "react-helmet": "^5.2.0",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
@@ -19,8 +24,7 @@
     "react-scripts": "1.0.17",
     "redux": "^3.7.2",
     "redux-form": "^7.3.0",
-    "redux-thunk": "^2.2.0",
-    "sifter": "^0.5.3"
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
@@ -35,17 +39,18 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",
   "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://vijay1989@bitbucket.org/vijay1989/runway-tagger.git"
-  },
-  "keywords": [
-    "runway-tagger"
-  ],
   "author": "Vijay",
   "license": "ISC",
-  "bugs": {
-    "url": "https://vijay1989@bitbucket.org/vijay1989/runway-tagger/issues"
+  "homepage": "http://vijay1989.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijaybaliah/wedding.git"
   },
-  "homepage": "/wedding"
+  "keywords": [
+    "vijay",
+    "profile"
+  ],
+  "bugs": {
+    "url": "https://github.com/vijaybaliah/wedding/issues"
+  }
 }

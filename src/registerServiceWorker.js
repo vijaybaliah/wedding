@@ -7,7 +7,7 @@
 
 // To learn more about the benefits of this model, read https://goo.gl/KwvDNy.
 // This link also includes instructions on opting out of this behavior.
-
+// eslint-disable-next-line
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
     // [::1] is the IPv6 localhost address.
@@ -71,7 +71,7 @@ function registerValidSW(swUrl) {
       console.error('Error during service worker registration:', error);
     });
 }
-
+// eslint-disable-next-line
 function checkValidServiceWorker(swUrl) {
   // Check if the service worker can be found. If it can't reload the page.
   fetch(swUrl)

@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
+import { Helmet } from "react-helmet";
 
-class MainAppContainer extends Component {
+class Wedding extends Component {
 
   constructor(props) {
     super(props)
-    ReactGA.initialize('UA-72154701-5');
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
@@ -27,6 +27,16 @@ class MainAppContainer extends Component {
   render() {
     return (
       <div className="weddingCover">
+        <Helmet>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+          <meta name="theme-color" content="#860002" />
+          <meta property="og:image" content="http://vijay1989.com/wedding/images/webcover.png" />
+          <meta name="description" content="Request your esteemed presence with your family & friends on the occasion of my marriage" />
+          <meta name="keywords" content= "vijay balu wedding Invitation, vijay wedding, kalyani wedding, vijay weds kalyani, kalyani wedding invitaion"/>
+          <meta property="og:title" content="Vijay weds Kalyani Invitation" />
+          <meta property="og:description" content="Request your esteemed presence with your family & friends on the occasion of my marriage" />
+        </Helmet>
         <div>
         <div className="content">
           <p className="zeroMargin heading">Vijay</p>
@@ -60,4 +70,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(MainAppContainer)
+)(Wedding)
