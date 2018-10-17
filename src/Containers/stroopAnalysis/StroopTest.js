@@ -27,6 +27,7 @@ class StroopTest extends Component {
       random: false,
       timer: '',
       timeTaken: '',
+      resTime: '',
       togglePopup: false,
       continueChallenge: false,
       id: Math.floor(Math.random() * 100000)
@@ -44,8 +45,9 @@ class StroopTest extends Component {
     const end = new moment()
     const duration = moment.duration(end.diff(start))
     const timeTaken = moment.utc(moment.duration(duration).asMilliseconds()).format('mm : ss ')
+    const resTime = moment.duration(duration).asMilliseconds()
     this.setState({
-      timeTaken: timeTaken,
+      timeTaken,
       togglePopup: true,
       continueChallenge: true
     })
@@ -55,13 +57,15 @@ class StroopTest extends Component {
       ReactGA.event({
         category: 'User-' + id,
         action: 'normal',
-        value: timeTaken
+        label: '' + resTime,
+        value: id
       })
     } else {
       ReactGA.event({
         category: 'User-' + id,
         action: 'random',
-        value: timeTaken
+        label: '' + resTime,
+        value: id
       })
     }
   }

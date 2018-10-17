@@ -24,12 +24,12 @@ class Profile extends Component {
           <meta property="og:title" content="Vijay Profile : Front End Developer Voonik, frontend developer mrvoonik, frontenddeveloper, front end developer" />
           <meta property="og:description" content="Front end developer with 3 years of experience in react, javascript and node.js environment" />
         </Helmet>
-        <Grid item xs={4}>
+        <Grid item sm={4} xs={12}>
           <div className={classnames('flex', 'center', 'middle')}>
             <img className={classnames('profile-img')} src={'./images/profile-photo.jpg'} alt={'vijay profile'}/>
           </div>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item sm={8} xs={12}>
           <h1 className={classnames('heading')}>About Myself</h1>
           <p>Currently I am working as a front end developer in voonik on web and mobile website development. I have one year experience in web application development. Prior to this, I worked as a project engineer in Wipro Technologies for a period of about 8 months.</p>
           <p>I have hands on experience in React, Redux, Node.js, Ruby on Rails, Jquery, Ajax, Javascript, Mysql, Html and Css</p>
@@ -41,12 +41,12 @@ class Profile extends Component {
             <div><p className={classnames("text-right projDate")}>2014 (Dec) to 2015 (Apr)</p></div>
           </div>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item sm={4} xs={12}>
           <div className={classnames('flex', 'center', 'middle')}>
             <img className={classnames('tic-tac-toe-img')} src={'./images/ic.jpg'} alt={'vijay tic tac toe app'} />
           </div>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item sm={8} xs={12}>
           <p><b>Project Description: </b>The aim of this project is to design a two player board game, TicTacToe. The player who succeeds in placing three respective marks in a horizontal, vertical, or diagonal line wins.</p>
           <ul>
             <li>Developed the algorithm for the game.</li>
