@@ -35,7 +35,7 @@ export const experiences = [
         note: '(Recently merged to Voonik)',
         description: 'Mr Voonik, India’s first “exclusively for men” fashion platform, designed to deliver the promise “Be Stylish Everyday”. Initially, Mrvoonik was in Ruby on Rails, so the challenge here was to migrate it to a React website without affecting the site performance and SEO.',
         responsibilities: [
-          'Was one of the core team member of Mrvoonik.',
+          'Was one of the core team members of Mrvoonik.',
           'Effectively coordinated with designers to give the best user experience for customers.',
           'Designed and developed Mrvoonik webpage from scratch in React.',
           'Added theme variables which helped us later for merging with Voonik.'
@@ -81,11 +81,11 @@ export const experiences = [
     projects: [
       {
         projectName: 'MyWipro',
-        description: 'MyWipro App helps the employees to keep track of their attendance, leaves applied, leaves approvals, time of logging, access to eResources. The objecttive of this application is to track the attendance of employees more efficiently so that the payroll can be proccessed without any lapses.',
+        description: 'MyWipro App helps the employees to keep track of their attendance, leaves applied, leaves approvals, time of logging, access to eResources. The objective of this application is to track the attendance of employees more efficiently so that the payroll can be processed without any lapses.',
         responsibilities: [
           'Experience with agile development methodologies.',
-          'Designed and developed the web applications based on the requirements.',
-          'Integrated routing logics.',
+          'Designed and developed web applications based on the requirements.',
+          'Integrated routing logic.',
           'Effectively handled test cases.',
         ],
         skills: [
