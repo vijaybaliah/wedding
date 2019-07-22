@@ -31,7 +31,7 @@ class Wedding extends Component {
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           <meta name="theme-color" content="#860002" />
-          <meta property="og:image" content="http://vijay1989.com/wedding/images/webcover.png" />
+          <meta property="og:image" content="http://vijay1989.com/images/webcover.png" />
           <meta name="description" content="Request your esteemed presence with your family & friends on the occasion of my marriage" />
           <meta name="keywords" content= "vijay balu wedding Invitation, vijay wedding, kalyani wedding, vijay weds kalyani, kalyani wedding invitaion"/>
           <meta property="og:title" content="Vijay weds Kalyani Invitation" />
@@ -48,9 +48,9 @@ class Wedding extends Component {
           <p className="zeroMargin headingSmall">venue:</p>
           <Link to="https://maps.google.com/maps?q=St+Michaels+Church+Anna+Nagar+4th+Street+Doovipuram+Tuticorin+Tamil+Nadu" target="blank" className="linkStyle" onClick={this.handleEvent}>St Micheal Church</Link>
         </div>
-        <img className="weddingImage" src={'./images/red-wedding-card.jpg'} alt="wedding background" style={{height: `${window.innerHeight}px`}}/>
+        <img className="weddingImage" src={'/images/red-wedding-card.jpg'} alt="wedding background" style={{height: `${window.innerHeight}px`}}/>
         <div className="heartContainer">
-          <img src={"./images/weddingheart.png"} alt="weddingheart"/>
+          <img src={"/images/weddingheart.png"} alt="weddingheart"/>
         </div>
         </div>
       </div>

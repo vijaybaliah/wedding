@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Ruthie');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC:300,700&display=swap');
 
 .weddingCover {
 	position: relative;
@@ -31,7 +31,8 @@
 }
 
 .heading {
-	font-size: 2em;
+    font-size: 2em;
+    margin-top: 0px;
 }
 
 .headingSmall {
@@ -89,6 +90,21 @@
     }
 }
 
+.profile-img {
+    display: block;
+    width: auto;
+    height: 250px;
+    margin-top: 24px;
+  }
+
+.about-me {
+    padding-top: 2em;
+}
+
+::selection {
+    background:rgba(74, 179, 161, 0.75);
+}
+
 @media (min-width: 768px) and (orientation: portrait) {
     .heartContainer {
         bottom: 4em;
@@ -105,6 +121,9 @@
     }
     .linkStyle {
         font-size: 4em;
+    }
+    .profile-img {
+        height: 170px;
     }
 }
 
@@ -147,5 +166,125 @@
 @media (min-width: 2560px) {
     .heartContainer{
         width: 23%;
+    }
+}
+
+.container {
+    flex-grow: 1;
+}
+
+.home {
+    background-color: #272727;
+    font-family: 'Noto Serif TC', serif;
+
+}
+
+.home div {
+    box-sizing: border-box;
+}
+
+.my-profile {
+    width: 100%;
+    padding: 0 12px;
+}
+
+.company {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+.work-exp {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.company a {
+    text-decoration: none;
+}
+
+.my-profile, .company a , .contact-details {
+    color: rgba(245, 255, 254, 0.75);
+}
+
+.projectName {
+    font-size: 24px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.description-container {
+    margin: 32px 0;
+}
+
+.description {
+    margin: 0px;
+}
+
+.skills {
+    font-weight: bold;
+}
+
+.note {
+    font-size: 12px;
+    font-style: italic;
+    margin: 0px;
+}
+
+.contact-icon {
+    margin-right: 16px;
+}
+
+.section-title {
+    font-weight: bold;
+}
+
+.contact-list {
+    margin: 8px 0;
+}
+
+.social-icons {
+    margin-left: 0px;
+    margin-right: 8px;
+}
+
+.social-media-section {
+    display: flex;
+}
+
+.contact-detail-container {
+    padding-bottom: 24px;
+}
+
+.company-list img {
+    display: block;
+    height: 40px;
+    width: auto;
+    margin: auto;
+}
+
+.company-list p {
+    margin: 4px 0;
+    text-align: center;
+    color: #272727;
+}
+
+.company-list div {
+    background: rgba(245, 255, 254, 0.75);
+    padding: 8px;
+    border-radius: 4px;
+}
+
+@media (min-width: 600px) {
+    .my-profile {
+        width: 80%;
+        margin: auto;
+    }
+    .social-media-section {
+        justify-content: flex-end;
+    }
+    .social-icons {
+        margin-right: 0px;
+        margin-left: 8px;
     }
 }

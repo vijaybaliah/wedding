@@ -10,12 +10,20 @@
   justify-content: space-between;
 }
 
+.flex.around {
+  justify-content: space-around;
+}
+
 .flex.middle {
   align-items: center;
 }
 
 .flex.equal {
   flex: 1;
+}
+
+.flex.end {
+  justify-content: flex-end;
 }
 
 .text-right {
@@ -36,4 +44,8 @@
 
 .absolute {
   position: absolute;
+}
+
+a {
+  text-decoration: none;
 }

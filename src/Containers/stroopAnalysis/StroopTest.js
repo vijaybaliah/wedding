@@ -112,7 +112,7 @@ class StroopTest extends Component {
           {
             stroopData.map((color, index) =>
               <div className={classnames('stroop-list')}>
-                <Grid container spacing={12}>
+                <Grid container spacing={16}>
                   <Grid item sm={2} xs={3}>
                     <div className="stroop-color-box">
                       <p className={classnames('stroop-color-box__text', color.value, 'text-center')}>{color.label}</p>
