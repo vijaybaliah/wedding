@@ -33,11 +33,11 @@ export const experiences = [
       {
         projectName: 'React Web Site for Mr Voonik',
         note: '(Recently merged to Voonik)',
-        description: 'Mr Voonik, India’s first “exclusively for men” fashion platform, designed to deliver the promise “Be Stylish Everyday”. Initially, Mrvoonik was in Ruby on Rails, so the challenge here was to migrate it to a React website without affecting the site performance and SEO.',
+        description: 'Mr Voonik, India’s first “exclusively for men” fashion platform, designed to deliver the promise “Be Stylish Everyday”. Initially, Mr Voonik was in Ruby on Rails, so the challenge here was to migrate it to a React website without affecting the site performance and SEO.',
         responsibilities: [
-          'Was one of the core team members of Mrvoonik.',
+          'Was one of the core team members of Mr Voonik.',
           'Effectively coordinated with designers to give the best user experience for customers.',
-          'Designed and developed Mrvoonik webpage from scratch in React.',
+          'Designed and developed Mr Voonik webpage from scratch in React.',
           'Added theme variables which helped us later for merging with Voonik.'
         ],
         skills: [
